@@ -138,7 +138,7 @@ section{padding:120px 0;position:relative}
 .s1{animation-delay:.05s}.s2{animation-delay:.13s}.s3{animation-delay:.21s}.s4{animation-delay:.29s}.s5{animation-delay:.37s}.s6{animation-delay:.45s}
 
 /* ---------- problem ---------- */
-.narrow{max-width:680px}
+.narrow{max-width:680px;margin-left:auto;margin-right:auto}
 .narrow p{margin-bottom:20px;font-size:18px}
 .leaks{margin-top:52px;border-top:1px solid var(--border)}
 .leak{
@@ -150,7 +150,9 @@ section{padding:120px 0;position:relative}
 .leak .arw{color:var(--silver);opacity:.5}
 
 /* ---------- growth loop ---------- */
-.loop-wrap{display:flex;flex-direction:column;align-items:center;margin-top:56px}
+#system .narrow{text-align:center}
+#system .eyebrow{margin-bottom:18px}
+.loop-wrap{display:flex;flex-direction:column;align-items:center;margin-top:44px}
 #loop{width:100%;max-width:460px;height:auto;overflow:visible}
 .node-ring{fill:var(--surface);stroke:var(--border-strong);stroke-width:1;transition:stroke .4s ease,fill .4s ease}
 .node-ring.active{stroke:var(--blue);fill:var(--surface-2)}
@@ -186,6 +188,7 @@ section{padding:120px 0;position:relative}
 .checks svg{flex-shrink:0;margin-top:3px;stroke:var(--silver);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.7}
 
 /* ---------- proof ---------- */
+#proof .narrow:first-of-type{text-align:center;margin-bottom:4px}
 .card{
   background:var(--surface);border:1px solid var(--border);
   border-radius:14px;padding:40px;margin-top:44px;
@@ -251,9 +254,9 @@ footer a:hover{color:var(--text)}
 .foot-legal{margin-top:32px;font-size:12px;color:var(--text-muted);opacity:.75}
 
 /* ---------- logo mark ---------- */
-.mark{height:26px;width:auto;display:block}
-.hero-mark{height:76px;width:auto;margin:0 auto 34px;display:block}
-.foot-mark{height:22px;width:auto;margin-bottom:8px}
+.mark{height:32px;width:auto;display:block;mix-blend-mode:screen}
+.hero-mark{height:84px;width:auto;margin:0 auto 30px;display:block;mix-blend-mode:screen}
+.foot-mark{height:38px;width:auto;margin-bottom:10px;mix-blend-mode:screen}
 
 /* ---------- ambient field ---------- */
 #field{
@@ -302,7 +305,7 @@ nav,section,footer{position:relative;z-index:1}
   .cols{grid-template-columns:1fr;gap:52px}
   .divider{height:1px;width:100%}
   .card{padding:28px 22px}
-  .hero-mark{height:58px;margin-bottom:26px}
+  .hero-mark{height:64px;margin-bottom:24px}
   #cursor-glow{display:none}
   .metric{font-size:12px}
   .node-lbl{font-size:11px}
@@ -327,7 +330,7 @@ nav,section,footer{position:relative;z-index:1}
 
 <nav id="nav">
   <div class="nav-inner">
-    <img src="logo.png" alt="Emanate AI" class="mark">
+    <img src="mark.png" alt="Emanate AI" class="mark">
     <a href="https://calendly.com/emanatehq/30min" class="btn btn-sm">Book a free audit</a>
   </div>
 </nav>
