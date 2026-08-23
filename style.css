@@ -371,3 +371,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .foot-grid { grid-template-columns: 1fr; }
   .foot-legal { flex-direction: column; }
 }
+
+/* Nav wordmark — "AI" set quieter so the lockup reads as one mark */
+.logo-ai { color: var(--text-3); margin-left: 5px; font-weight: 500; }
