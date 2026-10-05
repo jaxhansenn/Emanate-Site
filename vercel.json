@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/seo.html", "destination": "/", "permanent": true },
+    { "source": "/seo", "destination": "/", "permanent": true }
+  ]
+}
