@@ -435,3 +435,59 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .numbers-3 .num, .numbers-3 .num + .num { padding: 26px 0 8px; border-right: 0; border-top: 2px solid rgba(11,18,54,0.15); }
   .numbers-3 .num:first-child { border-top: 0; }
 }
+
+/* ---------- Industries dropdown ---------- */
+.dd { position: relative; }
+.dd::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 14px; }
+.dd-btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; border-radius: 999px; border: 0; background: none; font: 600 0.95rem var(--body); color: var(--on-dark-2); cursor: pointer; transition: color .2s, background .2s; }
+.dd-btn svg { width: 14px; height: 14px; transition: transform .25s; }
+.dd-btn:hover, .dd:hover .dd-btn, .dd.open .dd-btn { color: var(--white); background: rgba(255,255,255,0.06); }
+.dd-btn.active { color: var(--white); background: rgba(61,123,255,0.22); }
+.dd:hover .dd-btn svg, .dd.open .dd-btn svg { transform: rotate(180deg); }
+.dd-menu {
+  position: absolute; top: calc(100% + 12px); left: 50%; min-width: 320px; padding: 8px;
+  background: var(--midnight-2); border: 1px solid var(--line-dark); border-radius: 20px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+  opacity: 0; visibility: hidden; transform: translate(-50%, 8px); transition: opacity .2s, transform .25s, visibility .2s;
+}
+.dd:hover .dd-menu, .dd:focus-within .dd-menu, .dd.open .dd-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.nav-links .dd-menu a { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 13px; color: var(--on-dark); font-weight: 600; }
+.nav-links .dd-menu a:hover, .nav-links .dd-menu a.active { background: rgba(255,255,255,0.07); }
+.dd-menu i { width: 12px; height: 12px; border-radius: 4px; flex: none; }
+
+/* ---------- Industry tiles ---------- */
+.ind-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.ind { grid-column: span 2; border-radius: 26px; padding: 28px; min-height: 270px; display: flex; flex-direction: column; justify-content: space-between; gap: 30px; transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s; }
+.ind.big { grid-column: span 3; min-height: 300px; }
+.ind:hover { transform: translateY(-5px); box-shadow: 0 26px 50px -24px rgba(11,18,54,0.45); }
+.ind.t-white { border: 1.5px solid var(--line-light); }
+.t-deep { background: var(--midnight); color: var(--white); }
+.t-deep p { color: var(--on-dark-2); }
+.ind-ico { width: 58px; height: 58px; border-radius: 18px; display: grid; place-items: center; background: rgba(11,18,54,0.09); }
+.t-blue .ind-ico, .t-deep .ind-ico { background: rgba(255,255,255,0.14); }
+.ind-ico svg { width: 28px; height: 28px; }
+.ind h3 { font-size: clamp(1.55rem, 2.5vw, 2.15rem); font-weight: 800; line-height: 1.02; }
+.ind p { margin: 10px 0 0; font-size: 1.02rem; max-width: 38ch; opacity: 0.9; }
+.ind-go { display: inline-block; margin-top: 18px; font-weight: 700; border-bottom: 2px solid currentColor; padding-bottom: 2px; }
+.ind-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.ind-grid-4 .ind { grid-column: span 1; min-height: 240px; }
+.kicker-ico { width: 26px !important; height: 26px !important; border-radius: 50%; background: rgba(255,255,255,0.18) !important; display: grid !important; place-items: center; }
+.t-sun .kicker-ico, .t-mint .kicker-ico, .t-ice .kicker-ico { background: rgba(11,18,54,0.1) !important; }
+.kicker-ico svg { width: 15px; height: 15px; }
+
+@media (max-width: 1080px) {
+  .nav-links { display: none; position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; gap: 2px; background: var(--midnight); padding: 10px var(--gut) 22px; border-bottom: 1px solid var(--line-dark); max-height: calc(100svh - 76px); overflow-y: auto; }
+  .nav-links.open { display: flex; }
+  .nav-links > a { padding: 14px 12px; }
+  .nav-toggle { display: block; }
+  .nav-cta { display: none; }
+  .dd::after { display: none; }
+  .dd-btn { padding: 14px 12px 6px; pointer-events: none; font-size: 0.85rem; color: var(--on-dark-2); }
+  .dd-btn svg { display: none; }
+  .dd-menu { position: static; opacity: 1; visibility: visible; transform: none; min-width: 0; padding: 0 0 6px 10px; background: none; border: 0; box-shadow: none; }
+  .ind-grid, .ind-grid-4 { grid-template-columns: 1fr 1fr; }
+  .ind, .ind.big, .ind-grid-4 .ind { grid-column: auto; min-height: 0; }
+}
+@media (max-width: 640px) {
+  .ind-grid, .ind-grid-4 { grid-template-columns: 1fr; }
+}

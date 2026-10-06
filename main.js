@@ -39,6 +39,14 @@
     this.setAttribute('aria-expanded', l.classList.contains('open'));
   });
 
+  /* Industries dropdown: tap to open on touch screens, Escape to close */
+  document.querySelectorAll('.dd').forEach(function (dd) {
+    var b = dd.querySelector('.dd-btn');
+    b.addEventListener('click', function (e) { e.stopPropagation(); var o = dd.classList.toggle('open'); b.setAttribute('aria-expanded', o); });
+    document.addEventListener('click', function () { dd.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); });
+    dd.addEventListener('keydown', function (e) { if (e.key === 'Escape') { dd.classList.remove('open'); b.focus(); } });
+  });
+
   /* ---------- Hero: rings emanating, tasks flipping to done ---------- */
   var hero = document.querySelector('.hero');
   var canvas = hero && hero.querySelector('canvas');
