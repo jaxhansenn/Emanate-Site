@@ -158,11 +158,11 @@
   document.querySelectorAll('.anim, [data-count]').forEach(function (el) { io.observe(el); });
   function count(el) {
     var to = +el.getAttribute('data-count'), out = el.querySelector('.n');
-    if (reduce) { out.textContent = to; return; }
+    if (reduce) { out.textContent = to.toLocaleString('en-AU'); return; }
     var from = +el.getAttribute('data-from') || 0, t0 = performance.now(), dur = 1600;
     (function step(now) {
       var k = Math.min((now - t0) / dur, 1), e = 1 - Math.pow(1 - k, 4);
-      out.textContent = Math.round(from + (to - from) * e);
+      out.textContent = Math.round(from + (to - from) * e).toLocaleString('en-AU');
       if (k < 1) requestAnimationFrame(step);
     })(t0);
   }

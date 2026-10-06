@@ -424,3 +424,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .t-ice .steps::before, .t-white .steps::before { background: var(--line-light); }
 .t-ice .step p, .t-white .step p { color: var(--on-light-2); }
 .t-ice .step-dot, .t-white .step-dot { background: var(--white); border-color: rgba(11,18,54,0.15); color: var(--on-light-2); }
+
+/* Real estate page */
+.page-hero h1.h1-long { font-size: clamp(2.5rem, 5.4vw, 4.7rem); line-height: 0.98; }
+.numbers-3 { grid-template-columns: 1.35fr 0.75fr 1.2fr; border-top-color: rgba(11,18,54,0.35); }
+.numbers-3 .num { border-right-color: rgba(11,18,54,0.18); }
+.numbers-3 .num b { font-size: clamp(2.8rem, 6vw, 5.6rem); }
+@media (max-width: 1020px) {
+  .numbers-3 { grid-template-columns: 1fr; }
+  .numbers-3 .num, .numbers-3 .num + .num { padding: 26px 0 8px; border-right: 0; border-top: 2px solid rgba(11,18,54,0.15); }
+  .numbers-3 .num:first-child { border-top: 0; }
+}
