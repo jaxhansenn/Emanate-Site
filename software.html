@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Software & Systems — Emanate AI | Adelaide & Fleurieu</title>
+<title>AI Software & Systems | Emanate AI</title>
 <meta name="description" content="Custom software and AI systems built around how your business works: client onboarding, document handling, job pipelines and internal assistants. Adelaide and the Fleurieu Peninsula.">
+<meta name="theme-color" content="#0B1236">
 <link rel="icon" href="mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
-<nav class="nav">
+<nav class="nav solid">
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html"><img src="mark.png" alt=""> EMANATE AI</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">Menu</button>
+    <a class="nav-logo" href="index.html"><img src="mark.png" alt=""> Emanate AI</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
     <div class="nav-links" id="navLinks">
       <a href="automation.html">AI Automation</a>
       <a href="software.html" class="active">AI Software</a>
@@ -25,198 +26,89 @@
       <a href="index.html#about">About</a>
       <a href="index.html#faq">FAQ</a>
     </div>
-    <a class="btn nav-cta" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
+    <a class="btn btn-sun nav-cta" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
   </div>
 </nav>
 
-<header class="hero">
-  <div class="wrap hero-grid">
+<header class="page-hero t-sun">
+  <div class="wrap page-hero-grid">
     <div>
-      <span class="eyebrow">02 / AI Software &amp; Systems</span>
-      <h1>Software that fits<br>how you work.</h1>
+      <span class="kicker"><i></i>AI Software &amp; Systems</span>
+      <h1>Software that fits how you work.</h1>
       <p class="lede">Off-the-shelf tools make you work their way. When the gaps between them are costing you hours, I build the system that fits your business instead: forms, portals, pipelines, and AI that reads the paperwork so your team doesn't have to.</p>
       <div class="hero-actions">
-        <a class="btn btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
-        <a class="btn btn-ghost btn-lg" href="#examples">See examples</a>
+        <a class="btn btn-ink btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
+        <a class="btn btn-line-l btn-lg" href="#examples">See examples</a>
       </div>
-      <p class="hero-note">Built for one business at a time. Not another subscription you have to bend to fit.</p>
+      <p class="hero-note" style="opacity:.8">Built for one business at a time. Not another subscription you have to bend to fit.</p>
     </div>
-
-    <!-- Signature element: a record that built itself -->
-    <div class="reveal">
-      <div class="mock" aria-label="Example of a client record created automatically from an online form and uploaded documents">
-        <div class="mock-bar">
-          <span class="live"></span>
-          <span class="mock-title">New client · submitted 9:14am</span>
-          <span class="tag ok">Complete</span>
-        </div>
-        <div class="mock-head">
-          <h3>18 Bluestone Lane</h3>
-          <p>Victor Harbor SA 5211</p>
-        </div>
-        <div class="mock-list">
-          <div class="mock-field"><span class="mock-label">Owner</span><span class="mock-val">Michael Harris</span><span></span></div>
-          <div class="mock-field"><span class="mock-label">Rent</span><span class="mock-val">$620 / week</span><span class="tag">From ledger</span></div>
-          <div class="mock-field"><span class="mock-label">Lease ends</span><span class="mock-val">14 Mar 2027</span><span class="tag">From lease</span></div>
-          <div class="mock-field"><span class="mock-label">Documents</span><span class="mock-val">5 of 5, filed</span><span class="tag ok">Checked</span></div>
-          <div class="mock-field"><span class="mock-label">CRM</span><span class="mock-val">Synced 9:15am</span><span class="tag muted">No re-typing</span></div>
-        </div>
-      </div>
-      <p class="mock-cap">A concept: one link, and the record builds itself.</p>
-    </div>
+    <div class="panel-art"><div class="record anim" role="img" aria-label="A client record filled in automatically from an online form and uploaded documents">
+  <div class="record-top"><span>New client, submitted 9:14am</span><span class="pill ok">Complete</span></div>
+  <div class="record-head"><b>18 Bluestone Lane</b><small>Victor Harbor SA 5211</small></div>
+  <div class="record-row"><span>Owner</span><b>Michael Harris</b><span></span></div>
+  <div class="record-row"><span>Rent</span><b>$620 a week</b><span class="pill">From ledger</span></div>
+  <div class="record-row"><span>Lease ends</span><b>14 Mar 2027</b><span class="pill">From lease</span></div>
+  <div class="record-row"><span>Documents</span><b>5 of 5, filed</b><span class="pill ok">Checked</span></div>
+  <div class="record-row"><span>Your CRM</span><b>Synced 9:15am</b><span class="pill">Not re-typed</span></div>
+</div></div>
   </div>
 </header>
-
-<div class="strip">
-  <div class="strip-inner">
-    <span>Scoped and priced upfront</span>
-    <span>Built around your process</span>
-    <span>Connects to what you already use</span>
-    <span>Supported after launch</span>
-  </div>
-</div>
-
-<section>
+<section class="block t-white">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">When it's worth building</span>
-      <h2>When the workaround has become the job.</h2>
-      <p class="lede">Most businesses run on a patchwork: a spreadsheet, an inbox, three apps that don't talk to each other, and one person who remembers how it all fits together. That works until it doesn't.</p>
-    </div>
-    <div class="grid-2" style="gap:clamp(28px,4vw,56px); align-items:start;">
-      <ul class="checks reveal">
-        <li>The same details get typed into two or three systems</li>
-        <li>Your process lives in one person's head</li>
-        <li>You pay for software you only use a corner of</li>
-      </ul>
-      <ul class="checks reveal">
-        <li>Clients send documents by email and someone files them by hand</li>
-        <li>Reports get built by copying numbers out of other tools</li>
-        <li>You've looked for an app that does it, and none quite fit</li>
-      </ul>
-    </div>
+    <div class="split-head"><h2>When the workaround has become the job.</h2><p class="lede muted-l">Most businesses run on a patchwork: a spreadsheet, an inbox, three apps that don't talk to each other, and one person who remembers how it all fits together. That works until it doesn't.</p></div>
+    <ul class="checks"><li>The same details get typed into two or three systems</li><li>Your process lives in one person's head</li><li>You pay for software you only use a corner of</li><li>Clients send documents by email and someone files them by hand</li><li>Reports get built by copying numbers out of other tools</li><li>You've looked for an app that does it, and none quite fit</li></ul>
   </div>
 </section>
-
-<hr class="rule">
-
-<section id="examples">
+<section class="block t-dark" id="examples">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Examples</span>
-      <h2>The kind of thing I build.</h2>
-      <p class="lede">Every build is different, because every business is. These are the shapes most of them take.</p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card reveal">
-        <span class="card-num">CLIENT ONBOARDING</span>
-        <h3>One link instead of twenty emails</h3>
-        <p>New clients fill in their details and upload their documents in one place. The system files everything where it belongs, spots what's missing and follows up on it, so nobody has to chase.</p>
-      </div>
-      <div class="card reveal">
-        <span class="card-num">DOCUMENT HANDLING</span>
-        <h3>Paperwork that reads itself</h3>
-        <p>Leases, invoices, forms and reports read by AI, with the details that matter pulled out and put where they need to go. A person still checks anything important before it's used.</p>
-      </div>
-      <div class="card reveal">
-        <span class="card-num">JOB PIPELINES</span>
-        <h3>Every job, one view</h3>
-        <p>From enquiry to quote to booked to invoiced, in a pipeline that matches how your jobs actually move, not how a generic CRM thinks they should.</p>
-      </div>
-      <div class="card reveal">
-        <span class="card-num">INTERNAL ASSISTANTS</span>
-        <h3>Answers from your own information</h3>
-        <p>An assistant that answers your team's questions from your own procedures, price lists and policies, so the same questions stop landing on you.</p>
-      </div>
+    <div class="split-head"><h2>The kind of thing I build.</h2><p class="lede muted-d">Every build is different, because every business is. These are the shapes most of them take.</p></div>
+    <div class="builds">
+      <div class="build"><h3>Client onboarding<span class="tagline">One link instead of twenty emails</span></h3><p>New clients fill in their details and upload documents in one place. The system files everything where it belongs, spots what's missing and follows it up, so nobody has to chase.</p></div>
+      <div class="build"><h3>Document handling<span class="tagline">Paperwork that reads itself</span></h3><p>Leases, invoices, forms and reports read by AI, with the details that matter pulled out and put where they need to go. A person still checks anything important before it's used.</p></div>
+      <div class="build"><h3>Job pipelines<span class="tagline">Every job in one view</span></h3><p>From enquiry to quote to booked to invoiced, in a pipeline that matches how your jobs actually move, not how a generic CRM thinks they should.</p></div>
+      <div class="build"><h3>Internal assistants<span class="tagline">Answers from your own information</span></h3><p>An assistant that answers your team's questions from your own procedures, price lists and policies, so the same questions stop landing on you.</p></div>
     </div>
   </div>
 </section>
-
-<hr class="rule">
-
-<section>
+<section class="block t-ice">
+  <div class="wrap process">
+    <div class="process-head"><h2>Small first, then bigger once it's proven.</h2><p class="lede muted-l" style="margin-top:20px">You see working pieces early, not a big reveal at the end.</p></div>
+    <div class="steps">
+      <div class="steps-fill"></div>
+      <div class="step"><span class="step-dot">1</span><h3>Map the process</h3><p>Before anything is built, I sit with how the work actually moves through the business: who touches what, where it stalls, and what's being done twice.</p></div>
+      <div class="step"><span class="step-dot">2</span><h3>Scope and price it</h3><p>What it does, what it connects to, how long it takes and what it costs. Agreed in writing before a line is built, so there's no open-ended bill.</p></div>
+      <div class="step"><span class="step-dot">3</span><h3>Build in stages</h3><p>Working pieces early, so it's easy to change direction while that's still cheap.</p></div>
+      <div class="step"><span class="step-dot">4</span><h3>Launch and support</h3><p>Tested on real cases, then switched on, with a plain summary of what does what. If something breaks, you text me and I fix it.</p></div>
+    </div>
+  </div>
+</section>
+<section class="block t-white">
+  <div class="narrow">
+    <h2 style="margin-bottom:40px">Fair things to ask.</h2>
+    <div class="faq">
+      <details><summary>Why not just use off-the-shelf software?</summary><div class="faq-body"><p>Often you should, and I'll tell you so. Custom makes sense when you've tried the obvious tools and they force your team into workarounds, or when the real problem is getting several tools to work together.</p></div></details>
+      <details><summary>What does it cost?</summary><div class="faq-body"><p>It depends entirely on what it does. Every build is scoped and priced before it starts, so you know the number before you commit.</p></div></details>
+      <details><summary>Can I start small?</summary><div class="faq-body"><p>Yes, and I'd usually recommend it. Build the one piece that hurts most, see it work, then decide on the next.</p></div></details>
+      <details><summary>What happens if it breaks?</summary><div class="faq-body"><p>You text me and I fix it. Ongoing support is month to month if you want it.</p></div></details>
+      <details><summary>Where does our data go?</summary><div class="faq-body"><p>We agree on that before anything is built: what's stored where, what AI is allowed to see, and what never leaves your systems. If your industry has rules about it, they shape the design from the start.</p></div></details>
+    </div>
+  </div>
+</section>
+<section class="block t-sun cta">
+  <svg class="cta-ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="20"/><circle cx="100" cy="100" r="40"/><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="99"/></svg>
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">How a build goes</span>
-      <h2>Small first, then bigger once it's proven.</h2>
-    </div>
-    <div class="reveal">
-      <div class="step">
-        <span class="step-n">STEP 01</span>
-        <div><h3>Map the process</h3><p>Before anything is built, I sit with how the work actually moves through the business: who touches what, where it stalls, and what's being done twice.</p></div>
-      </div>
-      <div class="step">
-        <span class="step-n">STEP 02</span>
-        <div><h3>Scope and price it</h3><p>What it does, what it connects to, how long it takes and what it costs. Agreed in writing before a line is built, so there's no open-ended bill.</p></div>
-      </div>
-      <div class="step">
-        <span class="step-n">STEP 03</span>
-        <div><h3>Build in stages</h3><p>You see working pieces early, not a big reveal at the end. It's much easier to change direction while it's still cheap to.</p></div>
-      </div>
-      <div class="step">
-        <span class="step-n">STEP 04</span>
-        <div><h3>Launch and support</h3><p>Tested on real cases, then switched on, with a plain summary of what does what. If something breaks, you text me and I fix it.</p></div>
-      </div>
-    </div>
+    <h2>Got a process that doesn't fit the software?</h2>
+    <p class="lede">Fifteen minutes to walk me through it. I'll tell you whether it's worth building, and what it would take.</p>
+    <a class="btn btn-ink btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
   </div>
 </section>
-
-<hr class="rule">
-
-<section>
-  <div class="wrap-narrow">
-    <div class="head reveal">
-      <span class="eyebrow">Questions</span>
-      <h2>Fair things to ask.</h2>
-    </div>
-    <div class="faq reveal">
-      <details>
-        <summary>Why not just use off-the-shelf software?</summary>
-        <div class="faq-body"><p>Often you should, and I'll tell you so. Custom makes sense when you've tried the obvious tools and they force your team into workarounds, or when the real problem is getting several tools to work together.</p></div>
-      </details>
-      <details>
-        <summary>What does it cost?</summary>
-        <div class="faq-body"><p>It depends entirely on what it does. Every build is scoped and priced before it starts, so you know the number before you commit. You'll get a real figure once I've seen the process.</p></div>
-      </details>
-      <details>
-        <summary>Can I start small?</summary>
-        <div class="faq-body"><p>Yes, and I'd usually recommend it. Build the one piece that hurts most, see it work, then decide on the next.</p></div>
-      </details>
-      <details>
-        <summary>What happens if it breaks?</summary>
-        <div class="faq-body"><p>You text me and I fix it. Ongoing support is monthly if you want it.</p></div>
-      </details>
-      <details>
-        <summary>Where does our data go?</summary>
-        <div class="faq-body"><p>We agree on that before anything is built: what's stored where, what AI is allowed to see, and what never leaves your systems. If your industry has rules about it, they shape the design from the start rather than getting patched in later.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="wrap">
-    <div class="reveal">
-      <h2>Got a process that doesn't fit the software?</h2>
-      <p class="lede">Fifteen minutes to walk me through it. I'll tell you whether it's worth building, and what it would take.</p>
-      <a class="btn btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
 <footer class="foot">
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="foot-logo"><img src="logo.png" alt="Emanate AI"></div>
-        <p class="small" style="max-width:34ch;">AI automation, custom software and AI consulting for businesses across Adelaide and the Fleurieu Peninsula.</p>
-        <div class="social">
-          <a href="https://www.instagram.com/emanateai.com.au/" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm7.84-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
-          </a>
-        </div>
+      <div class="foot-intro">
+        <h4>Emanate AI</h4>
+        <p>AI automation, custom software and AI consulting for local businesses across Adelaide and the Fleurieu Peninsula.</p>
+        <div class="social"><a href="https://www.instagram.com/emanateai.com.au/" aria-label="Emanate AI on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm7.84-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg></a></div>
       </div>
       <div>
         <h4>Services</h4>
@@ -231,10 +123,18 @@
         <ul>
           <li><a href="mailto:jax@emanateai.com.au">jax@emanateai.com.au</a></li>
           <li><a href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a></li>
+          <li><a href="https://www.instagram.com/emanateai.com.au/">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
         </ul>
       </div>
     </div>
+    <div class="wordmark" aria-hidden="true">Emanate<span>.</span></div>
     <div class="foot-legal">
       <span>Emanate AI · ABN 14 966 193 042</span>
       <span>Adelaide &amp; Fleurieu Peninsula, South Australia</span>
@@ -242,17 +142,7 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('navToggle').addEventListener('click', function () {
-    document.getElementById('navLinks').classList.toggle('open');
-  });
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(function (el, i) {
-    el.style.transitionDelay = (i % 3) * 70 + 'ms';
-    io.observe(el);
-  });
-</script>
+<script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
+<script src="main.js" defer></script>
 </body>
 </html>

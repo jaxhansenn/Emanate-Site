@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Emanate AI — AI Automation, Software & Consulting | Adelaide & Fleurieu</title>
+<title>Emanate AI | AI Automation, Software & Consulting for Local Businesses</title>
 <meta name="description" content="I build AI automations and custom systems for local businesses, so enquiries get answered, quotes get chased and nothing gets typed twice. Adelaide and the Fleurieu Peninsula.">
+<meta name="theme-color" content="#0B1236">
 <link rel="icon" href="mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html"><img src="mark.png" alt=""> EMANATE AI</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">Menu</button>
+    <a class="nav-logo" href="index.html"><img src="mark.png" alt=""> Emanate AI</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
     <div class="nav-links" id="navLinks">
       <a href="automation.html">AI Automation</a>
       <a href="software.html">AI Software</a>
@@ -25,236 +26,229 @@
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="btn nav-cta" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
+    <a class="btn btn-sun nav-cta" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
   </div>
 </nav>
 
-<!-- ============ HERO ============ -->
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">AI Automation · AI Software · AI Consulting</span>
-      <h1>Less admin.<br>More business.</h1>
-      <p class="lede">I build the systems that answer enquiries, chase quotes and handle the paperwork for local businesses, so the work you've already earned doesn't slip through while you're busy doing the job.</p>
-      <div class="hero-actions">
-        <a class="btn btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
-        <a class="btn btn-ghost btn-lg" href="#leak">See what's leaking</a>
-      </div>
-      <p class="hero-note">15 minutes. You'll leave knowing where your enquiries and hours are going, whether you work with me or not.</p>
-    </div>
-
-    <!-- Signature element: an afternoon that runs itself -->
-    <div class="reveal">
-      <div class="mock" aria-label="Example of automations handling a business's enquiries during the afternoon">
-        <div class="mock-bar">
-          <span class="live"></span>
-          <span class="mock-title">Your business · Today</span>
-          <span>Running</span>
-        </div>
-        <div class="mock-list">
-          <div class="mock-row"><span class="mock-time">2:14pm</span><span class="mock-text"><strong>Missed call</strong> while you're on a job</span><span class="tag">Texted back</span></div>
-          <div class="mock-row"><span class="mock-time">2:16pm</span><span class="mock-text"><strong>"Blocked sink, Goolwa. Any chance today?"</strong></span><span class="tag">Summarised</span></div>
-          <div class="mock-row"><span class="mock-time">2:31pm</span><span class="mock-text"><strong>Booked in</strong> for 4:00pm, confirmation sent</span><span class="tag ok">Booked</span></div>
-          <div class="mock-row"><span class="mock-time">3:02pm</span><span class="mock-text"><strong>Quote #1042</strong> followed up, day 3</span><span class="tag">Sent</span></div>
-          <div class="mock-row"><span class="mock-time">3:40pm</span><span class="mock-text"><strong>Job details</strong> into your accounts</span><span class="tag muted">Not re-typed</span></div>
-        </div>
-      </div>
-      <p class="mock-cap">An example afternoon. None of it needed you to stop work.</p>
-    </div>
+<header class="hero" id="top">
+  <canvas aria-hidden="true"></canvas>
+  <div class="chips" aria-hidden="true">
+      <div class="chip" data-x="62" data-y="24" data-mx="22" data-my="30"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span class="todo">Missed call, 2:14pm</span><span class="done">Texted back</span></div>
+      <div class="chip m-hide" data-x="88" data-y="28" data-mx="50" data-my="50"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span class="todo">New website enquiry</span><span class="done">Replied and logged</span></div>
+      <div class="chip" data-x="91" data-y="52" data-mx="74" data-my="18"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span class="todo">Quote #1042, no reply</span><span class="done">Followed up</span></div>
+      <div class="chip" data-x="82" data-y="79" data-mx="30" data-my="62"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span class="todo">Thursday 9am booking</span><span class="done">Confirmed</span></div>
+      <div class="chip m-hide" data-x="60" data-y="86" data-mx="50" data-my="50"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span class="todo">Supplier invoice</span><span class="done">Entered once</span></div>
+      <div class="chip" data-x="56" data-y="62" data-mx="72" data-my="72"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span class="todo">New client documents</span><span class="done">Checked and filed</span></div>
+      <div class="chip m-hide" data-x="79" data-y="38" data-mx="50" data-my="50"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span class="todo">Ask for a review</span><span class="done">Request sent</span></div>
   </div>
+  <div class="wrap hero-inner">
+    <h1><span class="line"><span>Less admin.</span></span><span class="line"><span>More business.</span></span></h1>
+    <p class="lede">I build the systems that answer enquiries, chase quotes and handle the paperwork for local businesses, so the work you've already earned doesn't slip away while you're busy doing the job.</p>
+    <div class="hero-actions">
+      <a class="btn btn-sun btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
+      <a class="btn btn-line-d btn-lg" href="#tuesday">See how it works</a>
+    </div>
+    <p class="hero-note">15 minutes. You'll leave knowing where your enquiries and hours are going, whether you work with me or not.</p>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Scroll<span></span></div>
 </header>
 
-<!-- ============ TRUST STRIP ============ -->
-<div class="strip">
-  <div class="strip-inner">
-    <span>Adelaide &amp; Fleurieu Peninsula</span>
-    <span>Owner-operated</span>
-    <span>Tested before it goes live</span>
-    <span>ABN 14 966 193 042</span>
-  </div>
-</div>
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Missed call texted back</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Quote followed up</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Booking confirmed</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Invoice sent</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Documents filed</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Enquiry answered at 9pm</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Review request sent</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Details entered once</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Missed call texted back</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Quote followed up</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Booking confirmed</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Invoice sent</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Documents filed</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Enquiry answered at 9pm</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Review request sent</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Details entered once</span></div></div>
 
-<!-- ============ THE LEAK ============ -->
-<section id="leak">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">The leak</span>
-      <h2>You're not short on work. You're losing it in the admin.</h2>
-      <p class="lede">The phone rings while you're on the tools. The form fill sits in an inbox nobody checked. By the time you get back to them that evening, they've called someone else.</p>
-      <p class="lede">Then the quotes you did send sit there, unanswered, because nobody chased them. And the jobs you do win get typed into three different places before anyone sends an invoice.</p>
-    </div>
-
-    <div class="ladder reveal">
-      <div class="ladder-row">
-        <span class="ladder-stage">Not caught</span>
-        <span class="ladder-loss">Missed call at 2pm on a job. No voicemail. No callback until seven.</span>
-        <span class="ladder-tag">Never replied to</span>
-      </div>
-      <div class="ladder-row">
-        <span class="ladder-stage">Not chased</span>
-        <span class="ladder-loss">Quote sent. Never opened again by either of you.</span>
-        <span class="ladder-tag">Never followed up</span>
-      </div>
-      <div class="ladder-row">
-        <span class="ladder-stage">Typed twice</span>
-        <span class="ladder-loss">The same details copied from the form, to the spreadsheet, to the invoice.</span>
-        <span class="ladder-tag">Every single job</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- ============ SERVICES ============ -->
-<section id="services">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">What I do</span>
-      <h2>Three ways in, depending on what's broken.</h2>
-      <p class="lede">Some businesses need one automation. Some need a proper system built around how they work. Some need someone to work out which. I do all three, and I'll tell you which one you actually need.</p>
-    </div>
-
-    <div class="grid-3">
-      <a class="card reveal" href="automation.html">
-        <span class="card-num">01 / AUTOMATION</span>
-        <h3>AI Automation</h3>
-        <p>Missed calls texted back in seconds. Enquiries answered while you're on the tools. Quotes, reminders and reviews chased without you remembering to.</p>
-        <span class="card-more">How it works →</span>
-      </a>
-      <a class="card reveal" href="software.html">
-        <span class="card-num">02 / SYSTEMS</span>
-        <h3>AI Software &amp; Systems</h3>
-        <p>Custom tools built around how your business runs: client onboarding, job pipelines, paperwork that gets read and filed for you. For when off-the-shelf software makes you work around it.</p>
-        <span class="card-more">How it works →</span>
-      </a>
-      <a class="card reveal" href="consulting.html">
-        <span class="card-num">03 / STRATEGY</span>
-        <h3>AI Consulting</h3>
-        <p>A proper look at how your business actually runs, where the hours are going, and what's worth building first. Including what isn't.</p>
-        <span class="card-more">How it works →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- ============ HOW IT WORKS ============ -->
-<section id="how">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">The process</span>
-      <h2>How working together actually goes.</h2>
-      <p class="lede">No pitch deck, no three-week onboarding. Here's the whole thing.</p>
-    </div>
-
-    <div class="grid-2" style="align-items:start; gap:clamp(32px,4vw,60px);">
-      <div class="reveal">
-        <div class="step">
-          <span class="step-n">STEP 01</span>
-          <div>
-            <h3>The audit call</h3>
-            <p>15 minutes. You walk me through how enquiries, quotes and admin move through the business now, and I show you where it's leaking and what I'd look at first. Free, and you keep the notes either way.</p>
+<section class="story t-ice" id="tuesday">
+  <div class="story-stage">
+    <div class="wrap">
+      <div class="story-grid">
+        <div>
+          <div class="story-intro">
+            <h2>A normal Tuesday, handled.</h2>
+            <p class="lede muted-l">Scroll through a day in a local business: the moments that usually slip, and what happens instead.</p>
           </div>
-        </div>
-        <div class="step">
-          <span class="step-n">STEP 02</span>
-          <div>
-            <h3>The plan</h3>
-            <p>What's broken, what it's costing, what I'd fix first and what it'd cost to fix. One page, in plain English, priced before anything starts.</p>
+          <div class="story-steps">
+          <div class="story-step on" data-time="8:04" data-ampm="AM">
+            <p class="problem">An enquiry lands while you're driving to the first job.</p>
+            <p class="fix"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></b><span>They get a reply straight away, and the details arrive on your phone as a text.</span></p>
           </div>
-        </div>
-        <div class="step">
-          <span class="step-n">STEP 03</span>
-          <div>
-            <h3>The build</h3>
-            <p>Built, connected to what you already use, and tested on real cases before a customer ever touches it. You approve every message that goes out in your name.</p>
+          <div class="story-step" data-time="11:40" data-ampm="AM">
+            <p class="problem">Your phone rings with both hands full.</p>
+            <p class="fix"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></b><span>They get a text back before they've rung the next business on the list.</span></p>
           </div>
-        </div>
-        <div class="step">
-          <span class="step-n">STEP 04</span>
-          <div>
-            <h3>Handed over, and looked after</h3>
-            <p>You get a plain summary of what's running and what it does. If something breaks, you text me and I fix it. If you want something changed, same.</p>
+          <div class="story-step" data-time="3:15" data-ampm="PM">
+            <p class="problem">Last week's quote is still sitting there, unanswered.</p>
+            <p class="fix"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></b><span>It gets followed up on day 3, 7 and 14, and stops the moment they reply.</span></p>
           </div>
+          <div class="story-step" data-time="9:47" data-ampm="PM">
+            <p class="problem">The admin you'd normally do at the kitchen table.</p>
+            <p class="fix"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></b><span>Already done. Entered once, filed, and the invoice is ready to send.</span></p>
+          </div>
+          </div>
+          <div class="story-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         </div>
-      </div>
-
-      <div class="reveal">
-        <div class="shot" data-label="Workflow screenshot — workflow.png">
-          <img src="workflow.png" alt="An automation workflow connecting phone, SMS and calendar" onerror="this.parentElement.classList.add('img-missing')">
+        <div class="story-phone" aria-hidden="true">
+          <div class="phone"><div class="phone-screen" data-step="0">
+            <div class="phone-notch"></div>
+            <div class="phone-time"><div class="day">Tuesday</div><div class="clock">8:04</div><div><span class="ampm">AM</span></div></div>
+            <div class="notes">
+          <div class="note" data-step="0" data-n="0"><div class="app"><span class="dot"></span>Website<em>now</em></div><strong>New enquiry</strong>Deck quote in Goolwa, around 20 square metres</div>
+          <div class="note good" data-step="0" data-n="1"><div class="app"><span class="dot"></span>Emanate<em>now</em></div><strong>Replied to Sam</strong>Asked for photos and saved him to your client list</div>
+          <div class="note" data-step="1" data-n="0"><div class="app"><span class="dot"></span>Phone<em>now</em></div><strong>Missed call</strong>0491 570 157</div>
+          <div class="note good" data-step="1" data-n="1"><div class="app"><span class="dot"></span>Emanate<em>now</em></div><strong>Texted back</strong>“Sorry, on a job. What do you need a hand with?”</div>
+          <div class="note" data-step="2" data-n="0"><div class="app"><span class="dot"></span>Quotes<em>now</em></div><strong>Quote #1042</strong>No reply in 7 days</div>
+          <div class="note good" data-step="2" data-n="1"><div class="app"><span class="dot"></span>Emanate<em>now</em></div><strong>Karen replied</strong>“Let's go ahead. Is next Tuesday ok?”</div>
+          <div class="note" data-step="3" data-n="0"><div class="app"><span class="dot"></span>Jobs<em>now</em></div><strong>Job #318 marked complete</strong>Karen, blocked sink, Goolwa</div>
+          <div class="note good" data-step="3" data-n="1"><div class="app"><span class="dot"></span>Emanate<em>now</em></div><strong>Invoice drafted</strong>Documents filed. Nothing typed twice.</div>
+            </div>
+          </div></div>
         </div>
-        <p class="shot-cap">One of the automations, before it goes live.</p>
       </div>
     </div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ============ ABOUT ============ -->
-<section id="about">
-  <div class="wrap founder">
-    <div class="founder-photo reveal">
-      <img src="jax.jpg" alt="Jax Hansen, founder of Emanate AI" onerror="this.parentElement.classList.add('img-missing')">
+<section class="block t-dark" id="services" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="split-head services-head">
+      <h2>Three ways I can help.</h2>
+      <p class="lede muted-d">Some businesses need one automation. Some need a proper system built around how they work. Some need someone to work out which. I'll tell you which one you actually need.</p>
     </div>
-    <div class="reveal">
-      <span class="eyebrow">Who you're dealing with</span>
+    <div class="stack">
+      <article class="panel t-blue">
+        <div>
+          <h3>AI Automation</h3>
+          <p class="lede">The repetitive jobs that eat your evenings, running on their own: replies, follow-ups, reminders and review requests.</p>
+          <ul class="specs">
+            <li><span>Handles</span><span>Enquiries, missed calls, quotes, bookings, reviews</span></li>
+            <li><span>Build time</span><span>Usually under two weeks</span></li>
+            <li><span>Runs on</span><span>Your existing number, inbox and calendar</span></li>
+          </ul>
+          <a class="btn btn-sun" href="automation.html">See the automations</a>
+        </div>
+        <div class="panel-art"><div class="flow" role="img" aria-label="A missed call becomes a text back, then a reply, then a booking">
+  <svg viewBox="0 0 440 350">
+    <path id="flowpath" class="path" d="M105 74 C105 112 335 62 335 100 L335 154 C335 192 105 147 105 185 L105 239 C105 277 335 237 335 275"/>
+    <g class="node hot"><rect x="20" y="20" width="170" height="54" rx="27"/><text x="105" y="52" text-anchor="middle">Missed call</text></g>
+    <g class="node"><rect x="250" y="100" width="170" height="54" rx="27"/><text x="335" y="132" text-anchor="middle">Text back sent</text></g>
+    <g class="node"><rect x="20" y="185" width="170" height="54" rx="27"/><text x="105" y="217" text-anchor="middle">They reply</text></g>
+    <g class="node ok"><rect x="250" y="275" width="170" height="54" rx="27"/><text x="335" y="307" text-anchor="middle">Booked in</text></g>
+    <circle class="runner" r="8"><animateMotion dur="4.2s" repeatCount="indefinite" rotate="auto"><mpath href="#flowpath"/></animateMotion></circle>
+  </svg>
+</div></div>
+      </article>
+      <article class="panel t-sun">
+        <div>
+          <h3>AI Software &amp; Systems</h3>
+          <p class="lede">Custom tools built around how your business actually runs, for when off-the-shelf software makes you work around it.</p>
+          <ul class="specs">
+            <li><span>Handles</span><span>Client onboarding, paperwork, job pipelines, internal tools</span></li>
+            <li><span>Build time</span><span>Set out in the plan, before you agree to anything</span></li>
+            <li><span>Built for</span><span>One business at a time: yours</span></li>
+          </ul>
+          <a class="btn btn-ink" href="software.html">See what I build</a>
+        </div>
+        <div class="panel-art"><div class="record anim" role="img" aria-label="A client record filled in automatically from an online form and uploaded documents">
+  <div class="record-top"><span>New client, submitted 9:14am</span><span class="pill ok">Complete</span></div>
+  <div class="record-head"><b>18 Bluestone Lane</b><small>Victor Harbor SA 5211</small></div>
+  <div class="record-row"><span>Owner</span><b>Michael Harris</b><span></span></div>
+  <div class="record-row"><span>Rent</span><b>$620 a week</b><span class="pill">From ledger</span></div>
+  <div class="record-row"><span>Lease ends</span><b>14 Mar 2027</b><span class="pill">From lease</span></div>
+  <div class="record-row"><span>Documents</span><b>5 of 5, filed</b><span class="pill ok">Checked</span></div>
+  <div class="record-row"><span>Your CRM</span><b>Synced 9:15am</b><span class="pill">Not re-typed</span></div>
+</div></div>
+      </article>
+      <article class="panel t-mint">
+        <div>
+          <h3>AI Consulting</h3>
+          <p class="lede">A proper look at where your hours are going, and an honest answer about what's worth automating. Including what isn't.</p>
+          <ul class="specs">
+            <li><span>Starts with</span><span>A fixed-price assessment</span></li>
+            <li><span>You get</span><span>A ranked plan, priced item by item</span></li>
+            <li><span>Then</span><span>I build it, or you take the plan elsewhere</span></li>
+          </ul>
+          <a class="btn btn-ink" href="consulting.html">How it works</a>
+        </div>
+        <div class="panel-art"><div class="sorter anim" role="img" aria-label="A business's weekly tasks sorted into automate, AI-assisted and keep human">
+  <div class="bin auto"><h4>Automate</h4>
+    <div class="task" style="--i:0">After-hours enquiries</div>
+    <div class="task" style="--i:3">Booking reminders</div>
+    <div class="task" style="--i:6">Chasing invoices</div>
+  </div>
+  <div class="bin assist"><h4>AI-assisted</h4>
+    <div class="task" style="--i:1">Writing quotes</div>
+    <div class="task" style="--i:4">Replying to reviews</div>
+    <div class="task" style="--i:7">Rostering</div>
+  </div>
+  <div class="bin human"><h4>Keep human</h4>
+    <div class="task" style="--i:2">Pricing the big jobs</div>
+    <div class="task" style="--i:5">Handling a complaint</div>
+    <div class="task" style="--i:8">On-site judgement calls</div>
+  </div>
+</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block t-blue">
+  <div class="wrap">
+    <h2 style="max-width:16ch;margin-bottom:clamp(40px,6vw,70px)">The numbers that matter when you're busy.</h2>
+    <div class="numbers-grid">
+      <div class="num" data-count="15"><b><span class="n">0</span><small>min</small></b><p>for the first call, and you keep the notes either way</p></div>
+      <div class="num" data-count="60"><b><span class="n">0</span><small>sec</small></b><p>to hear about a new enquiry, wherever you are</p></div>
+      <div class="num" data-count="1" data-from="9"><b><span class="n">9</span></b><p>person you deal with, from the first call to the fix</p></div>
+      <div class="num" data-count="0" data-from="12"><b><span class="n">12</span></b><p>lock-in contracts. Support is month to month.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block t-dark" id="how">
+  <div class="wrap process">
+    <div class="process-head">
+      <h2>How working together goes.</h2>
+      <p class="lede muted-d" style="margin-top:20px">No pitch deck, no three-week onboarding. This is the whole thing.</p>
+      <a class="btn btn-sun" href="https://calendly.com/emanatehq/new-meeting" style="margin-top:12px">Start with step one</a>
+    </div>
+    <div class="steps">
+      <div class="steps-fill"></div>
+      <div class="step"><span class="step-dot">1</span><h3>The audit call</h3><p>15 minutes. You walk me through how enquiries, quotes and admin move through the business, and I show you where it's leaking and what I'd look at first. Free, and you keep the notes either way.</p></div>
+      <div class="step"><span class="step-dot">2</span><h3>The plan</h3><p>What's broken, what it's costing, what I'd fix first and what that costs. One page, in plain English, priced before anything starts.</p></div>
+      <div class="step"><span class="step-dot">3</span><h3>The build</h3><p>Built, connected to what you already use, and tested on real cases before a customer ever touches it. You approve every message that goes out in your name.</p></div>
+      <div class="step"><span class="step-dot">4</span><h3>Handed over, and looked after</h3><p>You get a plain summary of what's running. If something breaks, you text me and I fix it. If you want something changed, same.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block t-white" id="about">
+  <div class="wrap about">
+    <div class="about-photo">
+      <img src="jax.jpg" alt="Jax, founder of Emanate AI" onerror="this.parentElement.classList.add('img-missing')">
+      <span class="badge">Based on the Fleurieu</span>
+    </div>
+    <div>
       <h2>One person, and you'll have his number.</h2>
-      <p class="lede">I'm Jax. I run Emanate AI out of the Fleurieu, and I'm the one who does the work. There's no account manager, no offshore team, no ticket queue. If something breaks you text me and I fix it.</p>
-      <p class="lede">I started this because I watched good local businesses lose work they'd already earned: calls missed on the job, quotes nobody chased, nights spent typing up what should have happened automatically. That's a fixable problem, and most of the fixing is unglamorous. Get the process straight first, then automate the parts worth automating.</p>
+      <p class="lede">I'm Jax. I run Emanate AI, and I'm the one who does the work. There's no account manager, no offshore team, no ticket queue. If something breaks, you text me and I fix it.</p>
+      <p class="lede">I started this because I watched good local businesses lose work they'd already earned: calls missed on the job, quotes nobody chased, nights spent typing up what should have happened automatically. Most of the fix is unglamorous. Get the process straight first, then automate the parts worth automating.</p>
       <p class="lede">I'll also tell you when something isn't worth it. Some jobs should stay with a person, and a system that annoys your customers is worse than no system at all.</p>
       <p class="sig">Jax</p>
     </div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ============ FIT ============ -->
-<section id="fit">
+<section class="block t-ice">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Fit</span>
-      <h2>Built for local service businesses.</h2>
-      <p class="lede">Trades, clinics, studios, property and professional services. You're doing the work, the phone rings when it rings, and the admin keeps sliding to Sunday night.</p>
-    </div>
-    <div class="pills reveal">
-      <span class="pill">Earthmoving</span>
-      <span class="pill">Plumbing</span>
-      <span class="pill">Electrical</span>
-      <span class="pill">Roofing</span>
-      <span class="pill">Landscaping</span>
-      <span class="pill">Concreting</span>
-      <span class="pill">Builders</span>
-      <span class="pill">Physio</span>
-      <span class="pill">Chiro</span>
-      <span class="pill">Podiatry</span>
-      <span class="pill">Remedial massage</span>
-      <span class="pill">Gyms &amp; studios</span>
-      <span class="pill">Real estate</span>
-      <span class="pill">Professional services</span>
+    <p class="lede muted-l" style="margin-bottom:28px">Built for local businesses where the phone rings when it rings:</p>
+    <div class="trades">
+      <span>Plumbers</span><span>Electricians</span><span>Builders</span><span>Earthmovers</span><span>Landscapers</span><span>Roofers</span><span>Concreters</span><span>Physios</span><span>Chiros</span><span>Podiatrists</span><span>Massage therapists</span><span>Gyms</span><span>Studios</span><span>Cafés</span><span>Property managers</span><span>Real estate</span><span>Accountants</span>
     </div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ============ FAQ ============ -->
-<section id="faq">
-  <div class="wrap-narrow">
-    <div class="head reveal">
-      <span class="eyebrow">Questions</span>
-      <h2>Before you book.</h2>
-    </div>
-    <div class="faq reveal">
+<section class="block t-white" id="faq">
+  <div class="narrow">
+    <h2 style="margin-bottom:40px">Before you book.</h2>
+    <div class="faq">
       <details>
         <summary>What does it cost?</summary>
-        <div class="faq-body">
-          <p>Automations are quoted per build, depending on how many you want and what they need to connect to. Custom systems are scoped and priced before anything starts. Consulting begins with a fixed-price assessment.</p>
-          <p>I'll give you a real number on the call once I've seen the business. Quoting before that would be a guess, and you'd be right not to trust it.</p>
-        </div>
+        <div class="faq-body"><p>Automations are quoted per build, depending on how many you want and what they need to connect to. Custom systems are scoped and priced before anything starts. Consulting begins with a fixed-price assessment.</p><p>I'll give you a real number on the call once I've seen the business. Quoting before that would be a guess, and you'd be right not to trust it.</p></div>
       </details>
       <details>
         <summary>Do I have to change the software I use?</summary>
@@ -270,7 +264,7 @@
       </details>
       <details>
         <summary>Am I locked in?</summary>
-        <div class="faq-body"><p>No. Builds are quoted as one-off jobs, and ongoing support is monthly if you want it.</p></div>
+        <div class="faq-body"><p>No. Builds are quoted as one-off jobs, and ongoing support is month to month if you want it.</p></div>
       </details>
       <details>
         <summary>What happens to my data?</summary>
@@ -280,37 +274,26 @@
         <summary>I'm flat out already. Do I need this?</summary>
         <div class="faq-body"><p>Being flat out is usually why the admin is slipping. But I'm not going to talk you into anything. If there's nothing worth building, I'll tell you that on the call.</p></div>
       </details>
-      <details>
-        <summary>What happens on the call?</summary>
-        <div class="faq-body"><p>I ask how enquiries, quotes and admin move through the business now, and where it hurts. If there's a fit I'll tell you what I'd do and what it costs. If there isn't, I'll say so, and you keep the notes either way.</p></div>
-      </details>
     </div>
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
-<section class="cta">
+<section class="block t-sun cta">
+  <svg class="cta-ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="20"/><circle cx="100" cy="100" r="40"/><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="99"/></svg>
   <div class="wrap">
-    <div class="reveal">
-      <h2>Find out what's leaking.</h2>
-      <p class="lede">A free 15-minute audit of where your enquiries, quotes and hours are going missing. No pitch deck, no obligation.</p>
-      <a class="btn btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
-    </div>
+    <h2>Find out what's leaking.</h2>
+    <p class="lede">A free 15-minute call on where your enquiries, quotes and hours are going missing. No pitch deck, no obligation.</p>
+    <a class="btn btn-ink btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer class="foot">
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="foot-logo"><img src="logo.png" alt="Emanate AI"></div>
-        <p class="small" style="max-width:34ch;">AI automation, custom software and AI consulting for businesses across Adelaide and the Fleurieu Peninsula.</p>
-        <div class="social">
-          <a href="https://www.instagram.com/emanateai.com.au/" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm7.84-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
-          </a>
-        </div>
+      <div class="foot-intro">
+        <h4>Emanate AI</h4>
+        <p>AI automation, custom software and AI consulting for local businesses across Adelaide and the Fleurieu Peninsula.</p>
+        <div class="social"><a href="https://www.instagram.com/emanateai.com.au/" aria-label="Emanate AI on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm7.84-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg></a></div>
       </div>
       <div>
         <h4>Services</h4>
@@ -325,10 +308,18 @@
         <ul>
           <li><a href="mailto:jax@emanateai.com.au">jax@emanateai.com.au</a></li>
           <li><a href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a></li>
+          <li><a href="https://www.instagram.com/emanateai.com.au/">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
         </ul>
       </div>
     </div>
+    <div class="wordmark" aria-hidden="true">Emanate<span>.</span></div>
     <div class="foot-legal">
       <span>Emanate AI · ABN 14 966 193 042</span>
       <span>Adelaide &amp; Fleurieu Peninsula, South Australia</span>
@@ -336,17 +327,7 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('navToggle').addEventListener('click', function () {
-    document.getElementById('navLinks').classList.toggle('open');
-  });
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(function (el, i) {
-    el.style.transitionDelay = (i % 3) * 70 + 'ms';
-    io.observe(el);
-  });
-</script>
+<script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
+<script src="main.js" defer></script>
 </body>
 </html>
