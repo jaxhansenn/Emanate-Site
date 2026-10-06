@@ -491,3 +491,36 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 @media (max-width: 640px) {
   .ind-grid, .ind-grid-4 { grid-template-columns: 1fr; }
 }
+
+/* ---------- Industry calculator ---------- */
+.calc { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 4vw, 52px); align-items: start; }
+.calc-inputs { display: grid; gap: 18px; }
+.field label { display: block; font-weight: 700; font-size: 1.02rem; margin-bottom: 7px; }
+.field small { display: block; margin-top: 6px; font-size: 0.88rem; color: rgba(11,18,54,0.66); }
+.input { display: flex; align-items: center; gap: 4px; height: 60px; padding: 0 16px; background: var(--white); border: 2px solid rgba(11,18,54,0.14); border-radius: 16px; transition: border-color .2s, box-shadow .2s; }
+.input:focus-within { border-color: var(--midnight); box-shadow: 0 0 0 4px rgba(11,18,54,0.08); }
+.input span { font-weight: 700; color: var(--on-light-2); white-space: nowrap; }
+.input input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font: 700 1.3rem var(--body); color: var(--midnight); font-variant-numeric: tabular-nums; padding: 0 4px; }
+.input input::-webkit-outer-spin-button, .input input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.input input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+.calc-out { position: sticky; top: 100px; background: var(--midnight); color: var(--white); border-radius: 28px; padding: clamp(24px, 3.6vw, 42px); box-shadow: 0 40px 80px -36px rgba(11,18,54,0.6); }
+.calc-out .big { font-family: var(--display); font-weight: 800; font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 0.95; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: var(--sun); overflow-wrap: anywhere; }
+.big-label { margin: 10px 0 0; color: var(--on-dark-2); font-size: 1.05rem; }
+.calc-lines { list-style: none; padding: 0; margin: 26px 0; border-top: 1px solid var(--line-dark); }
+.calc-lines li { display: flex; justify-content: space-between; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line-dark); color: var(--on-dark-2); font-size: 0.98rem; }
+.calc-lines b { color: var(--white); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.recover { background: rgba(255,255,255,0.06); border: 1px solid var(--line-dark); border-radius: 20px; padding: 18px 20px 20px; margin-bottom: 20px; }
+.recover label { display: flex; justify-content: space-between; gap: 12px; font-weight: 600; margin-bottom: 14px; }
+.recover label b { color: var(--mint); font-size: 1.1rem; }
+.recover input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; border-radius: 8px; background: linear-gradient(90deg, var(--mint) var(--fill, 25%), rgba(255,255,255,0.15) var(--fill, 25%)); outline: none; cursor: pointer; }
+.recover input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; border-radius: 50%; background: var(--white); border: 4px solid var(--mint); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+.recover input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--white); border: 4px solid var(--mint); }
+.recover input[type=range]:focus-visible { outline: 3px solid var(--sun); outline-offset: 6px; }
+.rv { margin-top: 16px; }
+.rv .rec-val { font-family: var(--display); font-weight: 800; font-size: 2.2rem; letter-spacing: -0.03em; color: var(--mint); font-variant-numeric: tabular-nums; }
+.rv small { color: var(--on-dark-2); font-size: 0.95rem; }
+.calc-note { font-size: 0.88rem; color: var(--on-dark-2); margin: 0 0 18px; }
+@media (max-width: 1020px) {
+  .calc { grid-template-columns: 1fr; }
+  .calc-out { position: relative; top: 0; }
+}

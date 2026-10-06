@@ -154,6 +154,65 @@
     window.addEventListener('scroll', onStory, { passive: true }); window.addEventListener('resize', onStory); onStory();
   }
 
+
+  /* ---------- Industry calculators ---------- */
+  var money = function (n) { return '$' + Math.round(n).toLocaleString('en-AU'); };
+  var num = function (n) { return (Math.round(n * 10) / 10).toLocaleString('en-AU'); };
+  var MODELS = {
+    'real-estate': function (v) {
+      var appr = v.contacts * v.rate / 100, listings = appr * v.win / 100, per = v.price * v.comm / 100;
+      return { big: listings * per, lines: [['Appraisals booked', num(appr)], ['Listings won', num(listings)], ['Commission per listing', money(per)]] };
+    },
+    'trades': function (v) {
+      var jobs = v.calls * (v.real / 100) * (v.win / 100) * v.weeks;
+      return { big: jobs * v.job, lines: [['Real jobs missed a week', num(v.calls * v.real / 100)], ['Jobs you would have won, a year', num(jobs)], ['Each one worth', money(v.job)]] };
+    },
+    'allied-health': function (v) {
+      var slots = v.empty * v.weeks;
+      return { big: slots * v.price, lines: [['Unfilled appointments a year', num(slots)], ['Each one worth', money(v.price)], ['That is about', money(v.empty * v.price) + ' a week']] };
+    },
+    'gyms': function (v) {
+      var lost = v.enq * (1 - v.join / 100) * 12, member = v.price * 52 / 12 * v.months;
+      return { big: lost * member, lines: [['People who asked but didn\'t join, a year', num(lost)], ['Each member is worth', money(member)], ['Members joining now, a year', num(v.enq * v.join / 100 * 12)]] };
+    },
+    'local-business': function (v) {
+      var n = v.noshow * v.weeks;
+      return { big: n * v.price, lines: [['Empty bookings a year', num(n)], ['Each one worth', money(v.price)], ['That is about', money(v.noshow * v.price) + ' a week']] };
+    }
+  };
+  document.querySelectorAll('.calc').forEach(function (box) {
+    var model = MODELS[box.getAttribute('data-calc')];
+    var inputs = [].slice.call(box.querySelectorAll('input[data-k]'));
+    var rec = box.querySelector('[data-rec]');
+    var bigEl = box.querySelector('.big'), linesEl = box.querySelector('.calc-lines');
+    var shown = 0, anim;
+    function setBig(target) {
+      cancelAnimationFrame(anim);
+      if (reduce) { shown = target; bigEl.textContent = money(target); return; }
+      var from = shown, t0 = performance.now();
+      (function step(now) {
+        var k = Math.min((now - t0) / 450, 1), e = 1 - Math.pow(1 - k, 3);
+        shown = from + (target - from) * e; bigEl.textContent = money(shown);
+        if (k < 1) anim = requestAnimationFrame(step);
+      })(t0);
+    }
+    function update() {
+      var v = {};
+      inputs.forEach(function (i) { var x = parseFloat(i.value); v[i.dataset.k] = isFinite(x) && x > 0 ? x : 0; });
+      var r = model(v);
+      setBig(r.big);
+      linesEl.innerHTML = r.lines.map(function (l) { return '<li><span>' + l[0] + '</span><b>' + l[1] + '</b></li>'; }).join('');
+      if (rec) {
+        box.querySelector('.rec-pct').textContent = rec.value;
+        box.querySelector('.rec-val').textContent = money(r.big * rec.value / 100);
+        rec.style.setProperty('--fill', rec.value + '%');
+      }
+    }
+    inputs.forEach(function (i) { i.addEventListener('input', update); });
+    if (rec) rec.addEventListener('input', update);
+    update();
+  });
+
   /* ---------- Play-once animations, counters ---------- */
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {

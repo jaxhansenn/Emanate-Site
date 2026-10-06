@@ -48,7 +48,7 @@
       <p class="lede ">Barbers, salons, beauty, dog groomers, tattoo studios, cleaners, mechanics, cafés. If your customers book in, message you, or come back on a cycle, there's probably a job a system could take off your hands.</p>
       <div class="hero-actions">
         <a class="btn btn-sun btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
-        <a class="btn btn-line-d btn-lg" href="#offer">See the systems</a>
+        <a class="btn btn-line-d btn-lg" href="#calculator">Work out your numbers</a>
       </div>
       <p class="hero-note">Small setups welcome. You don't need to be big for this to help.</p>
     </div>
@@ -62,10 +62,40 @@
 </div></div>
   </div>
 </header>
-<section class="block t-sun">
+<section class="block t-sun" id="calculator">
   <div class="wrap">
-    <div class="split-head"><h2>No-shows add up fast.</h2><p class="lede">Example maths for a barber. Swap in your own price and how many people don't turn up.</p></div>
-    <div class="numbers-grid numbers-3"><div class="num" data-count="40"><b>$<span class="n">0</span></b><p>example haircut</p></div><div class="num" data-count="3"><b><span class="n">0</span></b><p>no-shows a week</p></div><div class="num" data-count="5760"><b>$<span class="n">0</span></b><p>a year, over 48 weeks</p></div></div>
+    <div class="split-head"><h2>What are no-shows costing you?</h2><p class="lede">Put in your own numbers. Count the bookings that didn't turn up and didn't get refilled.</p></div>
+    <div class="calc" data-calc="local-business">
+      <div class="calc-inputs">
+        <div class="field">
+          <label for="c-noshow">No-shows and late cancels a week</label>
+          <div class="input"><input id="c-noshow" data-k="noshow" type="number" inputmode="decimal" min="0" step="1" value="3"><span>bookings</span></div>
+          
+        </div>
+        <div class="field">
+          <label for="c-price">Average booking value</label>
+          <div class="input"><span>$</span><input id="c-price" data-k="price" type="number" inputmode="decimal" min="0" step="5" value="40"></div>
+          <small>A cut, a groom, a clean, whatever you do.</small>
+        </div>
+        <div class="field">
+          <label for="c-weeks">Weeks you work a year</label>
+          <div class="input"><input id="c-weeks" data-k="weeks" type="number" inputmode="decimal" min="0" step="1" value="48"><span>weeks</span></div>
+          
+        </div>
+      </div>
+      <div class="calc-out" aria-live="polite">
+        <div class="big">$0</div>
+        <p class="big-label">a year in empty chair time</p>
+        <ul class="calc-lines"></ul>
+        <div class="recover">
+          <label for="c-rec"><span>If a system filled some of those</span><b><span class="rec-pct">30</span>%</b></label>
+          <input id="c-rec" data-rec type="range" min="5" max="100" step="5" value="30">
+          <div class="rv"><span class="rec-val">$0</span> <small>a year back in your pocket</small></div>
+        </div>
+        <p class="calc-note">Your numbers, your estimates. This is a rough guide to talk through, not a promise.</p>
+        <a class="btn btn-sun" href="https://calendly.com/emanatehq/new-meeting">Talk through your numbers</a>
+      </div>
+    </div>
   </div>
 </section>
 <section class="block t-dark" id="offer">

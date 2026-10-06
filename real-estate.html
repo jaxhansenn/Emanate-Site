@@ -48,7 +48,7 @@
       <p class="lede muted-d">Most agencies have hundreds of past appraisal requests and old contacts nobody has followed up. I build the system that messages them in your name, finds who's ready to sell, and books them into your calendar. For property managers, I take the chasing out of new managements, maintenance and reminders.</p>
       <div class="hero-actions">
         <a class="btn btn-sun btn-lg" href="https://calendly.com/emanatehq/new-meeting">Book a free audit</a>
-        <a class="btn btn-line-d btn-lg" href="#offer">See the systems</a>
+        <a class="btn btn-line-d btn-lg" href="#calculator">Work out your numbers</a>
       </div>
       <p class="hero-note">You do the appraisal, the pricing and the selling. The system finds who's ready.</p>
     </div>
@@ -62,10 +62,45 @@
 </div></div>
   </div>
 </header>
-<section class="block t-sun">
+<section class="block t-sun" id="calculator">
   <div class="wrap">
-    <div class="split-head"><h2>One extra listing pays for it.</h2><p class="lede">Example maths on a typical sale. Your numbers will be different, but it doesn't take many booked appraisals for this to pay for itself.</p></div>
-    <div class="numbers-grid numbers-3"><div class="num" data-count="700000"><b>$<span class="n">0</span></b><p>example sale price</p></div><div class="num" data-count="2"><b><span class="n">0</span><small>%</small></b><p>example commission</p></div><div class="num" data-count="14000"><b>$<span class="n">0</span></b><p>to the agency, from one listing</p></div></div>
+    <div class="split-head"><h2>What's sitting in your database?</h2><p class="lede">Put in your own numbers. Be conservative. Even small percentages of an old database add up quickly.</p></div>
+    <div class="calc" data-calc="real-estate">
+      <div class="calc-inputs">
+        <div class="field">
+          <label for="c-contacts">Old contacts in your database</label>
+          <div class="input"><input id="c-contacts" data-k="contacts" type="number" inputmode="decimal" min="0" step="50" value="500"><span>people</span></div>
+          <small>Past appraisal requests, past buyers and past clients.</small>
+        </div>
+        <div class="field">
+          <label for="c-rate">How many would book an appraisal if asked</label>
+          <div class="input"><input id="c-rate" data-k="rate" type="number" inputmode="decimal" min="0" step="0.5" value="2"><span>%</span></div>
+          <small>Your guess. Most agents are surprised by this one.</small>
+        </div>
+        <div class="field">
+          <label for="c-win">Appraisals you turn into listings</label>
+          <div class="input"><input id="c-win" data-k="win" type="number" inputmode="decimal" min="0" step="5" value="40"><span>%</span></div>
+          
+        </div>
+        <div class="field">
+          <label for="c-price">Average sale price</label>
+          <div class="input"><span>$</span><input id="c-price" data-k="price" type="number" inputmode="decimal" min="0" step="10000" value="700000"></div>
+          
+        </div>
+        <div class="field">
+          <label for="c-comm">Your commission</label>
+          <div class="input"><input id="c-comm" data-k="comm" type="number" inputmode="decimal" min="0" step="0.1" value="2"><span>%</span></div>
+          
+        </div>
+      </div>
+      <div class="calc-out" aria-live="polite">
+        <div class="big">$0</div>
+        <p class="big-label">in potential commission from one campaign</p>
+        <ul class="calc-lines"></ul>
+        <p class="calc-note">Your numbers, your estimates. This is a rough guide to talk through, not a promise.</p>
+        <a class="btn btn-sun" href="https://calendly.com/emanatehq/new-meeting">Talk through your numbers</a>
+      </div>
+    </div>
   </div>
 </section>
 <section class="block t-dark" id="offer">
