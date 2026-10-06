@@ -333,7 +333,7 @@ p { margin: 0 0 1em; }
 .social a:hover { background: var(--sun); border-color: var(--sun); }
 .social a:hover svg { fill: var(--midnight); }
 .social svg { width: 18px; height: 18px; fill: var(--on-dark); }
-.wordmark { font-family: var(--display); font-weight: 800; font-size: clamp(4rem, 19.5vw, 19rem); line-height: 0.78; letter-spacing: -0.055em; white-space: nowrap; color: #19256A; user-select: none; margin: 0 0 24px -0.04em; }
+.wordmark { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 14.6vw, 13.2rem); line-height: 0.8; letter-spacing: -0.055em; white-space: nowrap; color: #19256A; user-select: none; margin: 0 0 24px -0.04em; }
 .wordmark span { color: var(--blue); }
 .foot-legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding-top: 22px; border-top: 1px solid var(--line-dark); color: var(--on-dark-2); font-size: 0.9rem; }
 
